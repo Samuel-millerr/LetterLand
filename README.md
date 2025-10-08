@@ -44,7 +44,7 @@ index.html
 
 ## 👨‍💻 Equipe de Desenvolvimento
 
-- [Enzo Gabriel Prevítale Silva](https://github.com/EnzoPrevitale)
+- [Enzo Gabriel Previtale Silva](https://github.com/EnzoPrevitale)
 - [Julya Jacometti](https://github.com/juujacometti)
 - [Rebeca Bugati Preza](https://github.com/Rebecapreza)
 - [Samuel Miller Soares](https://github.com/Samuel-millerr)
@@ -55,5 +55,6 @@ https://www.figma.com/design/22E6EI0VMnnBvMoWyA8Wb6/Alice-no-Site-das-Maravilhas
 
 ### 🌐 Versão online: 
 A ser adicionada
+
 
 
