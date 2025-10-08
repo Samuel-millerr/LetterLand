@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice in Wordland</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <figure id="figureImg">
+            <img src="./images/sobre-nos/logo.png" id="logo" alt="logo"/>
+        </figure>
+        <ul class="navLinks">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#usuario">Usuário</a></li>
+            <li><a href="#livro">Livro</a></li>
+            <li><a href="#personagens">Personagens</a></li>
+            <li><a href="#cacaPalavras">Caça-Palavras</a></li>
+        </ul>
+    </nav>
+
+    <main class="conteudoPrincipal">
+        <!-- === Início === -->
+        <section class="pagina" id="inicio">
+            <div class="conteudo">
+                <h1 id="tituloInicio">Bem-vindo(a)!</h1>
+                <p>
+                    Entre no mundo mágico da Alice e viva
+                    <span class="quebra">aventuras incríveis!</span>    <!-- Realiza uma quebra de linha -->
+                </p>
+                <figure>
+                    <img id="inicioAlice1" src="images/inicioAlice1.svg" alt="Metade 1 - Alice abrindo a porta em meio as nuvens com outros objetos e personagens voando.">
+                </figure>
+            </div>
+        </section>
+
+        <!-- === Nome usuário === -->
+        <section class="pagina" id="usuario">
+            <div class="conteudo">
+                <div id="fraseBalao">
+                    <p>
+                        Olá, bem-vindo(a) ao meu mundo!
+                        <span class="quebra">Para iniciarmos essa história maluca,</span>
+                        <span class="quebra">gostaria de saber seu nome:</span>     <!-- Realiza uma quebra de linha -->
+                    </p>
+                    <input id="inputFraseBalao" type="text">
+                </div>
+                <figure>
+                    <img id="inicioAlice2" src="images/inicioAlice2.svg" alt="Metade 2 - Alice abrindo a porta em meio as nuvens com outros objetos e personagens voando.">
+                    <img id="nomeUsuario" src="images/nomeUsuario.svg" alt="Gato sorridente Chester em cima de uma árvore.">
+                </figure>
+            </div>
+        </section>
+
+        <!-- === Ler livro === -->
+        <section class="pagina" id="livro">
+            <div class="conteudo">
+                <div id="fraseBalao2">
+                    <p id="nomePessoa"></p>
+                    <p>Para ler o livro, clique no botão!</p>
+                    <a href="livro.html" id="btnLerLivro" class="botao">
+                        <img id="imgBtnLerLivro" src="images/book.png">
+                        Ler
+                    </a>
+                </div>
+                <figure>
+                    <img id="lerLivro" src="images/lerLivro.svg" alt="Ícone de livro.">
+                </figure>
+            </div>
+        </section>
+
+        <!-- === Personagens === -->
+        <section class="pagina" id="personagens">
+            <div class="conteudo">
+                <h2 id="tituloPersonagens">Personagens</h2>
+                <figure>
+                    <img id="fundoPersonagens" src="images/fundoPersonagens.svg" alt="Abaixo da terra">
+                </figure>
+
+                <!-- == Cards personagens ==  -->
+                 <div id="todosCards">
+                    <!-- Card alice -->
+                    <div class="card" id="cardAlice">
+                        <img src="images/personagens/alice.svg" alt="Alice" class="personagem">
+                        <h3 class="nome">Alice</h3>
+                        <button class="fechar" id="btnFechar">×</button>
+                        <article class="conteudoCard" id="conteudoCardAlice">
+                            <p><strong>Nome:</strong> Alice Pleasance Liddell</p>
+                            <p><strong>Idade:</strong> 7 anos</p>
+                            <p><strong>Curiosidade:</strong> Adora aventuras e às vezes se mete em confusões por querer entender tudo, até o que não faz sentido!</p>
+                        </article>
+                    </div>
+                    <!-- Card absolem -->
+                    <div class="card" id="cardAbsolem">
+                        <img src="images/personagens/absolem.svg" alt="Absolem" class="personagem">
+                        <h3 class="nome">Absolem</h3>
+                        <button class="fechar" id="btnFechar">×</button>
+                        <article class="conteudoCard" id="conteudoCardAbsolem">
+                            <p><strong>Nome:</strong> Absolem</p>
+                            <p><strong>Idade:</strong> Desconhecida</p>
+                            <p><strong>Curiosidade:</strong> Ele vive sentado numa folha, fumando um narguilé e falando com muuuita calma. Parece dormindo, mas na verdade tá pensando em algo muito filosófico.</p>
+                        </article>
+                    </div>
+                    <!-- Card chapeleiro maluco -->
+                    <div class="card" id="cardChapeleiro">
+                        <img src="images/personagens/chapeleiro.svg" alt="Chapeleiro Maluco" class="personagem">
+                        <h3 class="nome">Chapeleiro Maluco</h3>
+                        <button class="fechar" id="btnFechar">×</button>
+                        <article class="conteudoCard" id="conteudoCardChapeleiro">
+                            <p><strong>Nome:</strong> Tarrant Hightopp</p>
+                            <p><strong>Idade:</strong> Desconhecida</p>
+                            <p><strong>Curiosidade:</strong> Fala com o tempo como se fosse uma pessoa e sempre tem uma xícara na mão. Dizem que até o relógio dele cheira a chá!</p>
+                        </article>
+                    </div>
+                    <!-- Card cheshire -->
+                    <div class="card" id="cardCheshire">
+                        <img src="images/personagens/cheshire.svg" alt="Gato Cheshire" class="personagem">
+                        <h3 class="nome">Cheshire</h3>
+                        <button class="fechar" id="btnFechar">×</button>
+                        <article class="conteudoCard" id="conteudoCardCheshire">
+                            <p><strong>Nome:</strong> Cheshire Cat</p>
+                            <p><strong>Idade:</strong> Desconhecida</p>
+                            <p><strong>Curiosidade:</strong> Consegue desaparecer e deixar só o sorrisão no ar! Ninguém sabe como ele faz isso.</p>
+                        </article>
+                    </div>
+                    <!-- Card coelho -->
+                    <div class="card" id="cardCoelho">
+                        <img src="images/personagens/coelho.svg" alt="Coelho" class="personagem">
+                        <h3 class="nome">Coelho Branco</h3>
+                        <button class="fechar" id="btnFechar">×</button>
+                        <article class="conteudoCard" id="conteudoCardCoelho">
+                            <p><strong>Nome:</strong> White Rabbit</p>
+                            <p><strong>Idade:</strong> Desconhecida</p>
+                            <p><strong>Curiosidade:</strong> Está sempre olhando o relógio e dizendo “Ai, ai! Estou atrasado!”, mas ninguém sabe pra quê!</p>
+                        </article>
+                    </div>
+                    <!-- Card rainha -->
+                    <div class="card" id="cardRainha">
+                        <img src="images/personagens/rainha.svg" alt="Rainha de Copas" class="personagem">
+                        <h3 class="nome">Rainha de Copas</h3>
+                        <button class="fechar" id="btnFechar">×</button>
+                         <article class="conteudoCard" id="conteudoCardRainha">
+                            <p><strong>Nome:</strong> Iracebeth of Crims</p>
+                            <p><strong>Idade:</strong> Desconhecida</p>
+                            <p><strong>Curiosidade:</strong> Ama corações, tortas de morango e mandar em todo mundo. Mas no fundo, só quer que façam o que ela manda!</p>
+                        </article>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- === Caça Palavras === -->
+        <section class="pagina" id="cacaPalavras">
+            <div class="conteudo">
+                <h2 id="tituloCacaPalavras">Caça-Palavras</h2>
+                <figure>
+                    <img id="fundoCaca" src="images/fundoCacaPalavras.svg" alt="Abaixo da terra">
+                </figure>
+                <a href="cacaPalavras.html" id="iniciarCaca">
+                    <img id="iconePlay" src="images/iconePlay.svg" alt="Ícone de play">
+                    Jogar
+                </a>
+                <div id="conteinerPalavrasSorteadas"></div>
+            </div>
+        </section>
+    </main>
+    <!-- Bibliotecas JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script defer src="script.js"></script>
+</body>
+</html>

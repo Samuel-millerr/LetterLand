@@ -1,0 +1,1018 @@
+/* === Importação de fontes === */
+@import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');    /* Títulos */
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Coiny&display=swap');    /* Fonte secundária */
+
+@font-face {
+	font-family: 'Alice';
+	src: url("./fonts/Alice-Regular.ttf");
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box; /* evita que padding/borda quebrem layout */
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+
+/* === Navbar === */
+.navbar {
+
+    transition: background-color 0.5s ease; /* suaviza a troca */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navLinks {
+    font-family: "Coiny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.navLinks a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navLinks a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navLinks a.active {    /* Estilo do botão ativo */
+    background-color:#1e90ff; 
+    color: white;
+}
+
+/* === Navbar === Página 1 - Início */
+.navbar.pagina1 {
+    background-color: rgba(1, 45, 98, 0.382);
+    position: fixed; /* Fixa a navbar no topo da tela */
+    width: 100%;
+    padding: 1.5rem;
+    z-index: 100;    /* Garante que a navbar fique na frente do conteúdo */
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* === Navbar === Página 2 - Usuário */
+.navbar.pagina2 {
+    /* background-color: #ca0062c6; */
+    background-color: #f49761c0;    
+    position: fixed; /* Fixa a navbar no topo da tela */
+    width: 100%;
+    padding: 1.5rem;
+    z-index: 100;    /* Garante que a navbar fique na frente do conteúdo */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navLinks.pagina2 a {
+    color: white;
+}
+
+.navLinks.pagina2 a.active {
+    /* background-color: #880142fd; */
+    background-color: #db6826;
+}
+
+/* === Navbar === Página 3 - Ler livro */
+.navbar.pagina3 {
+    background-color: #397d47d8;
+    position: fixed; /* Fixa a navbar no topo da tela */
+    width: 100%;
+    padding: 1.5rem;
+    z-index: 100;    /* Garante que a navbar fique na frente do conteúdo */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navLinks.pagina3 a {
+    color: white;
+}
+
+.navLinks.pagina3 a.active {
+    background-color: #00370a;
+}
+
+/* === Navbar === Página 4 - Personagens */
+.navbar.pagina4 {
+    background-color: #603013c3;
+    position: fixed; /* Fixa a navbar no topo da tela */
+    width: 100%;
+    padding: 1.5rem;
+    z-index: 100;    /* Garante que a navbar fique na frente do conteúdo */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navLinks.pagina4 a {
+    color: white;
+}
+
+.navLinks.pagina4 a.active {
+    background-color: #421900e8;
+}
+
+/* === Navbar === Página 5 - Caça-palavras */
+.navbar.pagina5 {
+    background-color: #603013c3;
+    position: fixed; /* Fixa a navbar no topo da tela */
+    width: 100%;
+    padding: 1.5rem;
+    z-index: 100;    /* Garante que a navbar fique na frente do conteúdo */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navLinks.pagina5 a {
+    color: white;
+}
+
+.navLinks.pagina5 a.active {
+    background-color: #421900e8;
+}
+
+/* === Estrutura das páginas === */
+.pagina {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+
+/* === Página 1 - Início === */
+#inicio { 
+    background: linear-gradient(180deg,rgba(1, 45, 98, 1) 0%, rgba(48, 121, 177, 1) 50%, rgba(142, 187, 232, 1) 100%); 
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+}
+
+#inicio h1 {
+    font-size: 50px;
+    margin-bottom: 0.8rem;
+}
+
+#inicio p {
+    font-size: 30px;
+    margin-bottom: 18rem;
+}
+
+.quebra {
+    display: block; /* Realiza uma quebra de linha */
+}
+
+
+#inicioAlice1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* Imagem cobre a tela inteira */
+    object-position: bottom;    /* Imagem termina junto com a tela */
+}
+
+
+/* === Página 2 - Nome do usuário === */
+#usuario { 
+    background: linear-gradient(180deg,rgba(204, 173, 158, 1) 22%, rgba(253, 161, 95, 1) 82%);    
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+}
+
+#inicioAlice2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   
+    object-position: top;    
+}
+
+#fraseBalao {
+    color: #012d62e3;
+    font-size: 25px;
+    position: relative;   /* Cria um empilhamento entre o texto e a imagem 'nomeUsuario' */
+    z-index: 10;          /* Index maior do que o da imagem, fazendo com que o texto sobreponha a imagem */
+    right: 62%;
+    margin-bottom: 50%;
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#inputFraseBalao {
+    border: none;
+    border-bottom: 2px dashed #012d62e3;
+    padding: 10px;
+    font-size: 20px;
+    color: #012d62e3;
+}
+
+
+#nomeUsuario {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+    object-position: bottom;   
+}
+
+
+/* === Página 3 - Livro === */
+#livro {
+    background: linear-gradient(180deg,rgba(253, 161, 95, 1) 22%, rgba(229, 196, 81, 1) 69%); 
+    font-style: normal;
+    position: relative;
+}
+
+
+#lerLivro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   
+    object-position: bottom;   
+}
+
+#fraseBalao2 {
+    color: #012d62e3;
+    font-size: 25px;
+    position: relative;   /* Cria um empilhamento entre o texto e a imagem 'nomeUsuario' */
+    z-index: 10;          /* Index maior do que o da imagem, fazendo com que o texto sobreponha a imagem */
+    right: 110%;
+    margin-bottom: 30%;
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;              
+    flex-direction: column;     
+    align-items: center;        
+    justify-content: center;    
+    gap: 0.5rem;                  
+    height: 100%;               
+    text-align: center;   
+}
+
+#btnLerLivro {
+    border: none;
+    border-radius: 50px;
+    background-color: #00174F;
+    color: white;
+    padding: 12px;
+    width: 10rem;
+    margin-top: 20px;
+    font-family: "Coiny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    list-style: none;
+    font-size: 20px;
+    display: flex;              
+    align-items: center;        
+    justify-content: center;    
+    gap: 10px;     
+    text-decoration: none;
+}
+
+#btnLerLivro:hover {
+    background-color: #0231a7;
+    cursor: pointer;
+}
+
+#imgBtnLerLivro {
+    width: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+/* === Página 4 - Personagens === */
+#personagens {
+    position: relative;
+}
+
+#tituloPersonagens {
+    position: relative;
+    z-index: 10; 
+    font-family: "Coiny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    list-style: none;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    
+}
+
+#fundoPersonagens {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   
+    object-position: top;   
+    z-index: 0;    
+}
+
+/* === Cards personagens === */
+#todosCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 80px;                             /* espaço entre os cards */
+    justify-items: center;                 /* centraliza os cards nas colunas */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.card {
+    position: relative;
+    width: 180px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    overflow: visible;           
+    transition: width 0.35s ease, height 0.35s ease, border-radius 0.35s ease;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centraliza verticalmente */
+    align-items: center;     /* centraliza horizontalmente */
+}
+
+.card .personagem {
+    position: absolute;
+    left: -30px;
+    bottom: -35px;
+    height: 120px;
+    transition: transform 0.35s ease, left 0.35s ease, height 0.35s ease;
+    z-index: 20;    /* fica acima do card quando fechado */
+    transform: translateY(-30px);    /* levanta ela pra fora do card */
+    pointer-events: auto;    /* permite clique normal */
+}
+
+.card .nome {
+    position: relative;  
+    top: auto;           
+    left: auto;         
+    transform: none;     
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Alice", serif;
+    color: white;
+    text-align: center;
+    z-index: 10;
+}
+
+/* Conteúdo do card */
+.conteudoCard {
+    display: none;    /* Esconde o conteúdo do card  inicialmente */
+    opacity: 0;     /* Invisível para permitir transição */
+    transition: opacity 0.3s ease;
+    color: white;
+    font-family: "Alice", serif;
+    padding: 10px 15px;
+    text-align: left;
+    margin-top: 140px;       
+    z-index: 5;
+}
+
+.card.ativo .conteudoCard {
+    display: block;    
+    opacity: 1;  
+}
+
+.card.ativo {
+    width: 320px;
+    height: 380px;
+    border: 5px solid #cbb58b;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    overflow: hidden;          
+    z-index: 2;  
+}
+
+.card.ativo .personagem {
+    left: 20px;
+    top: 10px;
+    bottom: auto;                
+    height: 130px;
+    transform: translateY(0);    /* volta ao lugar, "dentro" do card */
+    z-index: 2;     /* abaixo de .nome, acima do fundo */
+}
+
+.card.ativo .nome {
+    font-size: 24px;   
+}
+
+#btnFechar {
+    position: absolute;      
+    top: 10px;               
+    right: 10px;             
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 20px;
+    text-align: center;
+    padding: 0.2rem 0.5rem;  
+    background-color: #fff; 
+    color: #ff0000;            
+    cursor: pointer;
+    z-index: 30;    
+    display: none;      /* Faz com que o botão suma quando o card estiver fechado */       
+}
+
+.card.ativo #btnFechar {
+    display: block;    /* Aparece somente quando o card estiver ativo */
+}
+
+#cardAlice {
+  background-color: #4A86C4;
+}
+
+#cardAbsolem {
+  background-color: #BE4B4B;
+}
+
+#cardAbsolem .personagem {
+    left: -35px;
+}
+
+#cardAbsolem.ativo .personagem {
+    left: 0px;   
+}
+
+#cardChapeleiro {
+  background-color: #4BA5A9; 
+}
+
+#cardChapeleiro.ativo .nome {
+   margin-left: 48px;
+}
+
+#cardChapeleiro .personagem {
+    left: -55px;
+}
+
+#cardChapeleiro.ativo .personagem {
+    left: -10px;   
+}
+
+#cardCheshire {
+  background-color: #D74A8F; 
+}
+
+#cardCoelho {
+  background-color: #E07070; 
+}
+
+#cardCoelho.ativo .nome {
+   margin-left: 20px;
+}
+
+#cardCoelho .personagem {
+    left: -50px;
+}
+
+#cardCoelho.ativo .personagem {
+    left: 0px;   
+}
+
+#cardRainha {
+  background-color: #bc3636; 
+}
+
+#cardRainha.ativo .nome {
+   margin-left: 20px;
+}
+
+#cardRainha .personagem {
+    left: -62px;
+}
+
+#cardRainha.ativo .personagem {
+    left: -15px;   
+}
+
+/* === Página 5 - Caça palavras  === */
+.navbarCaca {
+    background-color: #0049c797;
+    position: fixed;
+    width: 100%;
+    padding: 1.5rem;
+    z-index: 100;
+    display: flex;
+    justify-content: flex-end;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navLinksCaca {
+    font-family: "Coiny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.navLinksCaca a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.navLinksCaca a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navLinksCaca a.active {
+    background-color: #002067;
+}
+
+#cacaPalavras {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#tituloCacaPalavras {
+  position: relative;
+  z-index: 10;
+  font-family: "Coiny", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#fundoCaca {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  z-index: 0;
+}
+
+#conteinerPalavrasSorteadas,
+#iniciarCaca, #sortearPalavras,
+#textoCaca {
+  position: relative;
+  z-index: 10;
+  color: white;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#iniciarCaca {
+  padding: 0.75rem 1.5rem;
+  background-color: #F2EAD7;
+  color: #512C14;
+  border: none;
+  border-radius: 50px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Coiny", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+#iconePlay {
+  width: 1.5rem;
+}
+
+#iniciarCaca:hover {
+  background-color: #fff;
+}
+
+#textoCaca {
+  position: relative;
+  z-index: 10;
+  color: white;
+  font-size: 18px;
+  max-width: 600px;
+  line-height: 1.5;
+  padding: 2rem;
+  transform: translateX(-85px); /* Ajuste fino para cima da parte bege */
+  margin-top: 70px;
+}
+
+#conteinerPalavrasSorteadas p.palavraAcertada {
+  background-color: #2E7D32;
+  color: #fff;
+  text-decoration: underline;
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 0.4rem 0.8rem;
+  transition: transform 0.2s ease;
+}
+
+#textoCaca span.palavraAcertada {
+  background-color: #2E7D32;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+  transition: transform 0.2s ease;
+}
+
+#textoCaca span.palavraAcertada:hover {
+  transform: scale(1.1);
+}
+
+/* === Caça palavras - Ancoragem  === */
+.navbarCaca {
+    transition: background-color 0.5s ease; /* suaviza a troca */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navLinksCaca {
+    font-family: "Coiny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.navLinksCaca a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#cacaPalavrasA {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16rem;
+    position: relative;
+    padding: 2rem;
+}
+
+
+#fundoCacaA {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   
+    object-position: bottom;   
+}
+
+#organizarCacaPalavras {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;         /* Centraliza título e botão */
+  justify-content: flex-start;
+  max-width: 400px;
+  margin-top: 3rem;
+  transform: translateX(-150px); /* Ajuste fino para cima da parte azul */
+    flex-shrink: 0;
+}
+
+#tituloCacaPalavrasA {
+    position: relative;
+    z-index: 10;
+    font-family: "Coiny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+      text-align: center;
+    width: 100%; /* Garante que o texto ocupe toda a largura */
+    margin-bottom: 1rem;
+}
+
+#sortearPalavras {
+    padding: 0.75rem 1.5rem;
+    background-color: #F2EAD7;
+    color: #512C14;
+    border: none;
+    border-radius: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Coiny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+#organizarPalavrasSorteadas{
+    width: 350px;
+}
+
+#conteinerPalavrasSorteadas {
+  font-size: 20px;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+  min-height: 200px; /* Reserva espaço mesmo antes de preencher */
+  justify-items: stretch;
+  align-items: flex-start;
+}
+
+#conteinerPalavrasSorteadas p {
+    background-color: #F2EAD7;
+    color: #512C14;
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+    margin: 0.3rem;
+    display: inline-block;
+    font-family: "Coiny", system-ui;
+    font-size: 25px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#textoCaca h3 {
+    font-family: "Coiny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #512C14;
+    font-size: 30px;
+}
+
+#textoCacaP, #textoCaca p {
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #512C14;
+    cursor: pointer;
+    font-size: 20px;
+    width: 550px;
+}
+
+/* Estilização da página de livro */
+#bodyBook{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Alice';
+	background-image: url(./images/livro/livro.png);
+	background-size: contain;
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-color: #F0F7FE;
+}
+
+#mainBook {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+    padding-top: 0.5rem;
+	gap: 1.5rem;
+	margin-top: 6rem;
+    width: 60%;
+}
+
+#inputsConteiner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+	gap: 1rem;
+	background-color: white;
+	width:50%;
+	height: 7.5rem;
+	color: #397DC2;
+	border-radius: 1rem;
+	box-shadow: 0 0 5px 1px black;
+}
+
+#inputsConteiner div input {
+	width: 13rem;
+	font-size: 14px;
+	padding: 0.8rem;
+	margin: 0.5rem;
+	border: none;
+	border-radius: 4px;
+	box-shadow: 2px 2px 7px 0 rgb(0, 0, 0, 0.2);
+	outline: none;
+	color: dimgray;
+}
+
+#capa {
+	background-image: url(./images/livro/capa.webp);
+}
+
+#magazine #contra-capa{
+	background-color: #065870;
+}
+
+#magazine{
+	width:1070px;
+	height:645px;
+	border-radius: 12px;
+}
+
+#magazine .turn-page{
+	background-size:100%;
+	border:2px solid #065870;
+	background-color: #fffdf7;
+	border: none;
+	box-shadow: inset 0 0 10px rgba(0,0,0,0.15);
+}
+
+.page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: justify;
+	font-size: 14px;
+}	
+
+.page h2 {
+	font-size: 1.4rem;
+	text-align: center;
+	color: #065870;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.page h3 {
+	margin-bottom: 3.5rem;
+}
+
+
+.page p {
+	justify-self: center;
+	padding: 1.75rem;
+}
+
+.highlight {
+	background-color: yellow;
+}
+
+
+.page {
+	animation: fadeIn 0.8s ease;
+}
+
+#buttonsConteiner {
+	display: flex;
+	gap: 23rem;	
+}
+
+.buttonsBook {
+	background-color: #065870;
+	color: white;
+	border: none;
+	padding: 0.9rem 0.9rem;
+	border-radius: 100%;
+	cursor: pointer;
+	font-weight: bold;
+	transition: all 0.3s ease;
+}
+
+.buttonsBook:hover {
+	transform: translateY(-2px);
+}
+
+.navbar {
+	display: flex;
+	justify-content: flex-end;
+    transition: background-color 0.5s ease;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+	display: flex;
+	width: 100%;
+	background-color: #065870;
+	background-color: rgba(6, 88, 112, 0.382);
+	padding: 1.5rem;
+	position: fixed;       
+    top: 0;               
+    left: 0;
+    width: 100%;             
+    z-index: 1000;         
+    margin: 0;
+	z-index: 100;
+}
+ 
+.navLinks {
+    font-family: "Coiny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+ 
+.navLinks a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+}
+
+.navLinks a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navLinks a.active {
+    background-color: #5192d2;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/*footer*/
+footer {
+    justify-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    margin-top: 12rem;
+    padding-top: 1rem;
+    font-size: 30px;
+    font-family: 'Alice', serif;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Logo */
+#figureImg {
+    padding-right: 60rem;
+}
+#logo {
+    width: 65px;
+}
