@@ -52,9 +52,3 @@ index.html
 
 ### 🔗 Protótipo de baixa/média fidelidade: 
 https://www.figma.com/design/22E6EI0VMnnBvMoWyA8Wb6/Alice-no-Site-das-Maravilhas?node-id=0-1&p=f
-
-### 🌐 Versão online: 
-A ser adicionada
-
-
-
