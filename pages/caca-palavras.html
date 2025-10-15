@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Alice in Wordland | Caça Palavras</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/static/style.css"/>
 </head>
 <body>
-
-    <nav class="navbarCaca">
-        <!-- Adicionar a logo -->
-        <ul class="navLinksCaca">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="livro.html">Livro</a></li>
-            <li><a href="cacaPalavras.html" class="active">Caça-Palavras</a></li>
+    <nav class="navbarLivro">
+        <figure class="figureImg">
+            <img src="../assets/images/logo.svg" class="logo" alt="logo"/>
+        </figure>
+        <ul class="navLivroLinks">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="./livro.html">Livro</a></li>
+            <li><a href="./caca-palavras.html" class="active">Caça-Palavras</a></li>
+            <li><a href="./sobre-nos.html">Sobre-nós</a></li>
         </ul>
     </nav>
 
@@ -21,7 +23,7 @@
         <!-- === Caça Palavras === -->
         <section class="pagina" id="cacaPalavrasA">
             <figure>
-                <img id="fundoCacaA" src="images/cacaPalavras/CacaPalavras.svg" alt="Abaixo da terra">
+                <img id="fundoCacaA" src="../assets/images/caca-palavras/CacaPalavras.svg" alt="Abaixo da terra">
             </figure>
             <div id="organizarCacaPalavras">
                 <h1 id="tituloCacaPalavrasA">Caça-Palavras</h1>
@@ -29,7 +31,7 @@
                     <div id="conteinerPalavrasSorteadas"></div>
                 </div>
                 <button id="sortearPalavras" type="button">
-                    <img id="iconePlay" src="images/iconePlay.svg" alt="Ícone de play">
+                    <img id="iconePlay" src="../assets/images/home-page/iconePlay.svg" alt="Ícone de play">
                     Iniciar
                 </button>
             </div>
@@ -40,7 +42,7 @@
             </div>
         </section>
 
-        <script defer src="cacaPalavras.js"></script>
+        <script defer src="../assets/js/cacaPalavras.js"></script>
     </main>
 </body>
 </html>

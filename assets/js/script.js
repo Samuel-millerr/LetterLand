@@ -77,6 +77,8 @@ window.addEventListener('keydown', (event) => {
 // Detecta os cliques nos links da navbar
 navLinks.forEach((link, index) => {
     link.addEventListener('click', (e) => {
+        if (link.getAttribute('href').endsWith('.html')) return;
+        
         e.preventDefault();
         irParaPagina(index);
     });

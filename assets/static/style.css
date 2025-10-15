@@ -2,11 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');    /* Títulos */
 @import url('https://fonts.googleapis.com/css2?family=Alice&family=Coiny&display=swap');    /* Fonte secundária */
 
-@font-face {
-	font-family: 'Alice';
-	src: url("./fonts/Alice-Regular.ttf");
-}
-
 * {
 margin: 0;
 padding: 0;
@@ -26,10 +21,14 @@ body {
 
 
 /* === Navbar === */
-.navbar {
+.logo {
+    max-width: 5rem;
+}
 
+.navbar {
     transition: background-color 0.5s ease; /* suaviza a troca */
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    align-items: center;
 }
 
 .navLinks {
@@ -66,10 +65,10 @@ body {
     background-color: rgba(1, 45, 98, 0.382);
     position: fixed; /* Fixa a navbar no topo da tela */
     width: 100%;
-    padding: 1.5rem;
+    padding: 1rem;
     z-index: 100;    /* Garante que a navbar fique na frente do conteúdo */
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 /* === Navbar === Página 2 - Usuário */
@@ -78,10 +77,10 @@ body {
     background-color: #f49761c0;    
     position: fixed; /* Fixa a navbar no topo da tela */
     width: 100%;
-    padding: 1.5rem;
+    padding: 1rem;
     z-index: 100;    /* Garante que a navbar fique na frente do conteúdo */
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 .navLinks.pagina2 a {
@@ -98,10 +97,10 @@ body {
     background-color: #397d47d8;
     position: fixed; /* Fixa a navbar no topo da tela */
     width: 100%;
-    padding: 1.5rem;
+    padding: 1rem;
     z-index: 100;    /* Garante que a navbar fique na frente do conteúdo */
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 .navLinks.pagina3 a {
@@ -117,10 +116,10 @@ body {
     background-color: #603013c3;
     position: fixed; /* Fixa a navbar no topo da tela */
     width: 100%;
-    padding: 1.5rem;
+    padding: 1rem;
     z-index: 100;    /* Garante que a navbar fique na frente do conteúdo */
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 .navLinks.pagina4 a {
@@ -136,10 +135,10 @@ body {
     background-color: #603013c3;
     position: fixed; /* Fixa a navbar no topo da tela */
     width: 100%;
-    padding: 1.5rem;
+    padding: 1rem;
     z-index: 100;    /* Garante que a navbar fique na frente do conteúdo */
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 .navLinks.pagina5 a {
@@ -149,6 +148,59 @@ body {
 .navLinks.pagina5 a.active {
     background-color: #421900e8;
 }
+
+.navbarLivro {
+    transition: background-color 0.5s ease; /* suaviza a troca */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.5s ease;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+	display: flex;
+	width: 100%;
+	background-color: #05232c;
+	background-color: rgba(6, 88, 112, 0.382);
+	padding: 1rem;
+	position: fixed;       
+    top: 0;               
+    left: 0;
+    width: 100%;             
+    z-index: 1000;         
+    margin: 0;
+	z-index: 100;
+}
+ 
+.navLivroLinks {
+    font-family: "Coiny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+ 
+.navLivroLinks a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navLivroLinks a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navLivroLinks a.active {
+    background-color: #5192d2;
+    color: white;
+    transform: translateY(-2px);
+}
+
 
 /* === Estrutura das páginas === */
 .pagina {
@@ -160,7 +212,6 @@ body {
     text-align: center;
     color: white;
 }
-
 
 /* === Página 1 - Início === */
 #inicio { 
@@ -529,10 +580,11 @@ body {
     background-color: #0049c797;
     position: fixed;
     width: 100%;
-    padding: 1.5rem;
+    padding: 0.75rem;
     z-index: 100;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -718,15 +770,15 @@ body {
 }
 
 #organizarCacaPalavras {
-  position: relative;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  align-items: center;         /* Centraliza título e botão */
-  justify-content: flex-start;
-  max-width: 400px;
-  margin-top: 3rem;
-  transform: translateX(-150px); /* Ajuste fino para cima da parte azul */
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;         /* Centraliza título e botão */
+    justify-content: flex-start;
+    max-width: 400px;
+    margin-top: 5rem;
+    transform: translateX(-150px); /* Ajuste fino para cima da parte azul */
     flex-shrink: 0;
 }
 
@@ -820,8 +872,8 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	font-family: 'Alice';
-	background-image: url(./images/livro/livro.png);
+	font-family: "Alice", serif;
+	background-image: url(../images/livro/livro.png);
 	background-size: contain;
 	background-position: left center;
 	background-repeat: no-repeat;
@@ -866,7 +918,7 @@ body {
 }
 
 #capa {
-	background-image: url(./images/livro/capa.webp);
+	background-image: url(../images/livro/capa.webp)
 }
 
 #magazine #contra-capa{
@@ -882,7 +934,7 @@ body {
 #magazine .turn-page{
 	background-size:100%;
 	border:2px solid #065870;
-	background-color: #fffdf7;
+	background-color: #f8f2e0;
 	border: none;
 	box-shadow: inset 0 0 10px rgba(0,0,0,0.15);
 }
@@ -942,77 +994,87 @@ body {
 	transform: translateY(-2px);
 }
 
-.navbar {
-	display: flex;
-	justify-content: flex-end;
-    transition: background-color 0.5s ease;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-	display: flex;
-	width: 100%;
-	background-color: #065870;
-	background-color: rgba(6, 88, 112, 0.382);
-	padding: 1.5rem;
-	position: fixed;       
-    top: 0;               
+/* Sobre Nós */
+#body-sobre-nos{
+    background-image: url(../images/sobre-nos/background.png);
+	background-repeat: no-repeat;
+	background-color: #F0F7FE;
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%;             
-    z-index: 1000;         
-    margin: 0;
-	z-index: 100;
-}
- 
-.navLinks {
-    font-family: "Coiny", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 30px;
-}
- 
-.navLinks a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s ease, box-shadow 0.3s ease;
-    display: inline-block;
+    width: 90%;
+    height: 100%;
+    z-index: -1;
 }
 
-.navLinks a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.navLinks a.active {
-    background-color: #5192d2;
-    color: white;
-    transform: translateY(-2px);
-}
-
-/*footer*/
-footer {
-    justify-self: flex-end;
+.sobreNos {
     display: flex;
     flex-direction: column;
-    z-index: 100;
-    margin-top: 12rem;
-    padding-top: 1rem;
-    font-size: 30px;
+    align-items: end;
+    padding: 10px 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+    margin-top: 7rem;
+    position: relative;
+    z-index: 1;
+}
+
+.sobreNos>h1 {
+    font-family: 'Coiny', cursive;
+    font-size: 48px;
+    font-weight: 200;
+    color: #1A3B5E;
+    text-align: left;
+    margin-bottom: 65px;
+    line-height: 1.2;
+    max-width: 70%;
+}
+
+.missaoSection {
+    display: flex;
+    flex-direction: row;
+    gap: 45px;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+.valoresSection{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 45px;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 80px;
+    align-items: center;
+}
+
+.missaoTitle,
+.valoresTitle {
+    font-family: 'Coiny', cursive;
+    font-size: 38px;
+    font-weight: 400;
+    color: #1A3B5E;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.textBox {
+    background: #F0F7FE;
+    border: 4px solid #2B5C9E;
+    border-radius: 40px;
+    padding: 45px 20px;
+    box-shadow: 0 8px 20px rgba(43, 92, 158, 0.15);
+    width: 160%;
+    max-width: 600px;
+}
+
+.textBox p {
+    color: #1A3B5E;
     font-family: 'Alice', serif;
-}
-
-footer a{
-    text-decoration: none;
-    color: white;
-}
-
-/* Logo */
-#figureImg {
-    padding-right: 60rem;
-}
-#logo {
-    width: 65px;
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: center;
+    font-weight: 400;
 }

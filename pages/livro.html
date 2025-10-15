@@ -1,23 +1,27 @@
 <!doctype html>
 <html>
-    <head>
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-        <script type="text/javascript" src="./turn.min.js"></script>
-        <link rel="stylesheet" href="./style.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <script defer src="./livro.js"></script>
-    </head>
+<head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../assets/js/turn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/static/style.css"/>
+    <script defer src="../assets/js/livro.js"></script>
+</head>
 <body id="bodyBook">
-    <nav class="navbar">
-        <ul class="navLinksCaca">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="livro.html"  class="active">Livro</a></li>
-            <li><a href="cacaPalavras.html">Caça-Palavras</a></li>
+    <nav class="navbarLivro">
+        <figure class="figureImg">
+            <img src="../assets/images/logo.svg" class="logo" alt="logo"/>
+        </figure>
+        <ul class="navLivroLinks">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="./livro.html"  class="active">Livro</a></li>
+            <li><a href="./caca-palavras.html">Caça-Palavras</a></li>
+            <li><a href="./sobre-nos.html">Sobre-nós</a></li>
         </ul>
     </nav>
     <main id="mainBook">
         <article id="inputsConteiner">
-            <h2> O que deseja pesquisar? </h2>
+            <h2> O que deseja procurar? </h2>
             <div>
                 <label></label>
                 <input type="text" id="searchText" placeholder="Digite uma palavra">
@@ -1504,5 +1508,6 @@
             <button id="nextPage" class="buttonsBook"><i class="fas fa-arrow-right"></i></button>
         </div>
     </main>
+
 </body>
 </html>
